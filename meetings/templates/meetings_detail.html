@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    <h1> {{meeting.title}}</h1>
+    <h2>Date: {{meeting.date}}</h2>
+    <p>Room: {{meeting.room}}</p>
+    <p>Start time: {{meeting.start_time}}</p>
+    <p>Duration in mins: {{meeting.duration}}</p>
+
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <h1> Meetings </h1>
+    <ul>
+        {% for m in meetings %}
+        <li>
+            <a href="{% url 'meetings_detail' id=m.id %}">{{m.title}} - {{m.room}}, {{m.start_time}},
+                {{m.date}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'create_meeting' %}">Create new meeting</a></p>
+
+{% endblock %}
